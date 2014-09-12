@@ -38,7 +38,7 @@
 
 ![字母验证码](http://i.imgur.com/aVhbegV.jpg)
 
-- [阅读资料](http://stackoverflow.com/questions/14832105/how-can-i-select-random-characters-in-a-pythonic-way) 
+- [阅读资料](http://stackoverflow.com/questions/2823316/generate-a-random-letter-in-python) 
 
 **第 0011 题：** 敏感词文本文件 filtered_words.txt，里面的内容为以下内容，当用户输入敏感词语时，则打印出 Freedom，否则打印出 Human Rights。
 
