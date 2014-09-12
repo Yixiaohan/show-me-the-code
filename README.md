@@ -37,6 +37,8 @@
 
 ![字母验证码](http://i.imgur.com/aVhbegV.jpg)
 
+- [阅读资料](http://stackoverflow.com/questions/14832105/how-can-i-select-random-characters-in-a-pythonic-way) 
+
 **第 0011 题：** 敏感词文本文件 filtered_words.txt，里面的内容为以下内容，当用户输入敏感词语时，则打印出 Freedom，否则打印出 Human Rights。
 
     北京
@@ -65,6 +67,31 @@
     	"3":["王五",60,66,68],
     }
 
-请将 上述内容写到 student.xls 文件中，如下图所示：
+请将上述内容写到 student.xls 文件中，如下图所示：
 
 ![student.xls](http://i.imgur.com/nPDlpme.jpg)
+
+**第 0015 题：** 纯文本文件 city.txt为城市信息, 里面的内容（包括花括号）如下所示：
+
+    {
+        "1" : "上海",
+        "2" : "北京",
+        "3" : "成都"
+    }
+
+请将上述内容写到 city.xls 文件中，如下图所示：
+
+![city.xls](http://i.imgur.com/rOHbUzg.png)
+
+
+**第 0016 题：** 纯文本文件 numbers.txt, 里面的内容（包括方括号）如下所示：
+
+    [
+    	[1, 82, 65535], 
+    	[20, 90, 13],
+    	[26, 809, 1024]
+    ]
+
+请将上述内容写到 numbers.xls 文件中，如下图所示：
+
+![numbers.xls](http://i.imgur.com/iuz0Pbv.png)
