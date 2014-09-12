@@ -55,7 +55,7 @@
 	
 **第 0012 题：** 敏感词文本文件 filtered_words.txt，里面的内容 和 0011题一样，当用户输入敏感词语，则用 星号 * 替换，例如当用户输入「北京是个好城市」，则变成「**是个好城市」。
 
-**第 0013 题：** 用 Python 写一个爬图片的程序，爬 [这个链接里的妹子图片](http://tieba.baidu.com/p/2166231880 "爬这个链接里的图片")
+**第 0013 题：** 用 Python 写一个爬图片的程序，爬 [这个链接里的日本妹子图片 :-)](http://tieba.baidu.com/p/2166231880)
 
 - [参考代码](http://www.v2ex.com/t/61686 "参考代码")
 
@@ -96,7 +96,7 @@
 
 ![numbers.xls](http://i.imgur.com/iuz0Pbv.png)
 
-**第 0016 题：** 将 第 0014 题中的 student.xls 文件中的内容写到 student.xml 文件中，如
+**第 0017 题：** 将 第 0014 题中的 student.xls 文件中的内容写到 student.xml 文件中，如
 
 下所示：
 
@@ -114,5 +114,6 @@
     }
     </students>
     </root>
-    
+
+- [阅读资料](http://www.cnblogs.com/skynet/archive/2013/05/06/3063245.html) 腾讯游戏开发 xml 和 Excel 相互转换    
  
