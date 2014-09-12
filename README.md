@@ -6,6 +6,7 @@
 - Python 练习册，每天一个小程序。注：将 Python 换成其他语言，大多数题目也试用
 - 不会出现诸如「打印九九乘法表」、「打印水仙花」之类的题目
 - 欢迎大家 Pull Request 出题目，贴代码（Gist、Blog皆可）:-)
+
 > Talk is cheap. Show me the code.--Linus Torvalds
 
 ----------
