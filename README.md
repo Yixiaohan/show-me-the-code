@@ -117,4 +117,39 @@
     </root>
 
 - [阅读资料](http://www.cnblogs.com/skynet/archive/2013/05/06/3063245.html) 腾讯游戏开发 xml 和 Excel 相互转换    
- 
+
+**第 0018 题：** 将 第 0015 题中的 city.xls 文件中的内容写到 city.xml 文件中，如下所示：
+
+    <?xmlversion="1.0" encoding="UTF-8"?>
+    <root>
+    <citys>
+    <!-- 
+    	城市信息
+    -->
+    {
+    	"1" : "上海",
+    	"2" : "北京",
+    	"3" : "成都"
+    }
+    </citys>
+    </root>
+
+**第 0019 题：** 将 第 0016 题中的 numbers.xls 文件中的内容写到 numbers.xml 文件中，如下
+
+所示：
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <root>
+    <numbers>
+    <!-- 
+    	数字信息
+    -->
+    
+    [
+    	[1, 82, 65535],
+    	[20, 90, 13],
+    	[26, 809, 1024]
+    ]
+    
+    </numbers>
+    </root>
