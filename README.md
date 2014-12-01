@@ -5,8 +5,9 @@
 
 - Python 练习册，每天一个小程序。注：将 Python 换成其他语言，大多数题目也适用
 - 不会出现诸如「打印九九乘法表」、「打印水仙花」之类的题目
-- [点此链接，会看到每个题目的代码， 欢迎大家 Pull Request 出题目，贴代码（Gist、Blog皆可）:-)](https://github.com/Show-Me-the-Code/python)
 - 本文本文由@史江歌（shijiangge@gmail.com  QQ:499065469）根据互联网资料收集整理而成，感谢互联网，感谢各位的分享。鸣谢！本文会不断更新。
+- 欢迎大家 Pull Request 出题目，贴代码（Gist、Blog皆可）:-)
+- 欢迎解答, 并发送 pull request 到 [Show-Me-the-Code](https://github.com/Show-Me-the-Code/python)
 
 > Talk is cheap. Show me the code.--Linus Torvalds
 
@@ -184,17 +185,17 @@
 
 
     例如，对着笔记本电脑吼一声“百度”，浏览器自动打开百度首页。
-    
+
     关键字：Speech to Text
-    
-参考思路：    
+
+参考思路：
 1：获取电脑录音-->WAV文件
     python record wav
 
 2：录音文件-->文本
 
     STT: Speech to Text
-    
+
     STT API Google API
 
 3:文本-->电脑命令
