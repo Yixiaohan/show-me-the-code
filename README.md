@@ -6,11 +6,12 @@
 - Python 练习册，每天一个小程序。注：将 Python 换成其他语言，大多数题目也试用
 - 不会出现诸如「打印九九乘法表」、「打印水仙花」之类的题目
 - 欢迎大家 Pull Request 出题目，贴代码（Gist、Blog皆可）:-)
+- 欢迎解答, 并发送 pull request 到 [Show-Me-the-Code](https://github.com/Show-Me-the-Code/python)
 
 > Talk is cheap. Show me the code.--Linus Torvalds
 
 ----------
- 
+
 **第 0000 题：**将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。
 类似于图中效果
 
@@ -18,9 +19,9 @@
 
 **第 0001 题：**做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用**生成激活码**（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）？
 
-**第 0002 题**：将 0001 题生成的 200 个激活码（或者优惠券）保存到 **MySQL** 关系型数据库中。 
+**第 0002 题**：将 0001 题生成的 200 个激活码（或者优惠券）保存到 **MySQL** 关系型数据库中。
 
-**第 0003 题：**将 0001 题生成的 200 个激活码（或者优惠券）保存到 **Redis** 非关系型数据库中。 
+**第 0003 题：**将 0001 题生成的 200 个激活码（或者优惠券）保存到 **Redis** 非关系型数据库中。
 
 **第 0004 题：**任一个英文的纯文本文件，统计其中的单词出现的个数。
 
@@ -38,7 +39,7 @@
 
 ![字母验证码](http://i.imgur.com/aVhbegV.jpg)
 
-- [阅读资料](http://stackoverflow.com/questions/2823316/generate-a-random-letter-in-python) 
+- [阅读资料](http://stackoverflow.com/questions/2823316/generate-a-random-letter-in-python)
 
 **第 0011 题：** 敏感词文本文件 filtered_words.txt，里面的内容为以下内容，当用户输入敏感词语时，则打印出 Freedom，否则打印出 Human Rights。
 
@@ -53,7 +54,7 @@
     love
     sex
 	jiangge
-	
+
 **第 0012 题：** 敏感词文本文件 filtered_words.txt，里面的内容 和 0011题一样，当用户输入敏感词语，则用 星号 * 替换，例如当用户输入「北京是个好城市」，则变成「**是个好城市」。
 
 **第 0013 题：** 用 Python 写一个爬图片的程序，爬 [这个链接里的日本妹子图片 :-)](http://tieba.baidu.com/p/2166231880)
@@ -88,7 +89,7 @@
 **第 0016 题：** 纯文本文件 numbers.txt, 里面的内容（包括方括号）如下所示：
 
     [
-    	[1, 82, 65535], 
+    	[1, 82, 65535],
     	[20, 90, 13],
     	[26, 809, 1024]
     ]
@@ -104,7 +105,7 @@
     <?xml version="1.0" encoding="UTF-8"?>
     <root>
     <students>
-    <!-- 
+    <!--
     	学生信息表
     	"id" : [名字, 数学, 语文, 英文]
     -->
@@ -116,14 +117,14 @@
     </students>
     </root>
 
-- [阅读资料](http://www.cnblogs.com/skynet/archive/2013/05/06/3063245.html) 腾讯游戏开发 xml 和 Excel 相互转换    
+- [阅读资料](http://www.cnblogs.com/skynet/archive/2013/05/06/3063245.html) 腾讯游戏开发 xml 和 Excel 相互转换
 
 **第 0018 题：** 将 第 0015 题中的 city.xls 文件中的内容写到 city.xml 文件中，如下所示：
 
     <?xmlversion="1.0" encoding="UTF-8"?>
     <root>
     <citys>
-    <!-- 
+    <!--
     	城市信息
     -->
     {
@@ -141,16 +142,16 @@
     <?xml version="1.0" encoding="UTF-8"?>
     <root>
     <numbers>
-    <!-- 
+    <!--
     	数字信息
     -->
-    
+
     [
     	[1, 82, 65535],
     	[20, 90, 13],
     	[26, 809, 1024]
     ]
-    
+
     </numbers>
     </root>
 
