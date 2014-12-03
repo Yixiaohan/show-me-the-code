@@ -8,6 +8,7 @@
 - 欢迎大家 Pull Request 出题目，贴代码（Gist、Blog皆可）:-)
 - [点此链接，会看到每个题目的代码](https://github.com/Show-Me-the-Code/python)
 - 本文本文由@史江歌（shijiangge@gmail.com  QQ:499065469）根据互联网资料收集整理而成，感谢互联网，感谢各位的分享。鸣谢！本文会不断更新。
+
 > Talk is cheap. Show me the code.--Linus Torvalds
 
 ----------
