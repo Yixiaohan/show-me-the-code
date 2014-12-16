@@ -3,7 +3,7 @@
 
 #### 说明： ####
 
-- Python 练习册，每天一个小程序。注：将 Python 换成其他语言，大多数题目也试用
+- Python 练习册，每天一个小程序。注：将 Python 换成其他语言，大多数题目也适用
 - 不会出现诸如「打印九九乘法表」、「打印水仙花」之类的题目
 - [点此链接，会看到每个题目的代码， 欢迎大家 Pull Request 出题目，贴代码（Gist、Blog皆可）:-)](https://github.com/Show-Me-the-Code/python)
 - 本文本文由@史江歌（shijiangge@gmail.com  QQ:499065469）根据互联网资料收集整理而成，感谢互联网，感谢各位的分享。鸣谢！本文会不断更新。
@@ -73,6 +73,8 @@
 
 ![student.xls](http://i.imgur.com/nPDlpme.jpg)
 
+- [阅读资料](http://www.cnblogs.com/skynet/archive/2013/05/06/3063245.html) 腾讯游戏开发 XML 和 Excel 内容相互转换
+
 **第 0015 题：** 纯文本文件 city.txt为城市信息, 里面的内容（包括花括号）如下所示：
 
     {
@@ -117,7 +119,6 @@
     </students>
     </root>
 
-- [阅读资料](http://www.cnblogs.com/skynet/archive/2013/05/06/3063245.html) 腾讯游戏开发 xml 和 Excel 相互转换    
 
 **第 0018 题：** 将 第 0015 题中的 city.xls 文件中的内容写到 city.xml 文件中，如下所示：
 
