@@ -168,8 +168,13 @@
 
 **第 0022 题：** iPhone 6、iPhone 6 Plus 早已上市开卖。请查看你写得 第 0005 题的代码是否可以复用。
 
-**第 0023 题：** 使用 Python 的 Web 框架，做一个 Web 版本 TODO 应用。
+**第 0023 题：** 使用 Python 的 Web 框架，做一个 Web 版本 留言簿 应用。
 
 [阅读资料：Python 有哪些 Web 框架](http://v2ex.com/t/151643#reply53)
 
-![留言簿参考](http://i.imgur.com/VIyCZ0i.jpg)
+- ![留言簿参考](http://i.imgur.com/VIyCZ0i.jpg)
+
+
+**第 0024 题：** 使用 Python 的 Web 框架，做一个 Web 版本 TodoList 应用。
+
+- ![SpringSide 版TodoList](http://i.imgur.com/NEf7zHp.jpg)
