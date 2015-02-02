@@ -27,27 +27,3 @@ class Image_num_taged:
         img_Taged.text(self.num_posi, str, (255, 0, 0), self.fnt)
         del img_Taged
         self.img.save(self.path)
-
-
-im = Image_num_taged()
-im.open_Img('squirrel.jpg')
-im.set_Font('Arabic.ttf', 20)
-im.num_Taged('4')
-
-
-# im = Image.open("squirrel.jpg")
-# (width, height) = im.size
-# posi = width - 10
-#
-# # fontsize = 20
-# # fontpath = 'C:\Windows\Fonts\Arial\Adobe Arabic.ttf'
-# # font = ImageFont.truetype(fontpath, fontsize, encoding = 'symb')
-# font = ImageFont.load_default()
-#
-#
-# im1 = ImageDraw.Draw(im)
-# im1.text(( posi, 0), "4", (255, 0, 0), font)
-#
-# del im1
-#
-# im.save("squirrel2.png")
