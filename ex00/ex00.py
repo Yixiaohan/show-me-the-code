@@ -27,3 +27,9 @@ class Image_num_taged:
         img_Taged.text(self.num_posi, str, (255, 0, 0), self.fnt)
         del img_Taged
         self.img.save(self.path)
+
+
+im = Image_num_taged()
+im.open_Img('squirrel.jpg')
+im.set_Font('Arabic.ttf', 20)
+im.num_Taged('4')
