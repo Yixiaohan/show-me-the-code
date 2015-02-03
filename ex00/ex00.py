@@ -1,6 +1,6 @@
-import sys
-import Image
-import ImageFont, ImageDraw, ImageOps
+from PIL import Image
+from PIL import ImageFont, ImageDraw
+
 
 class Image_num_taged:
     def open_Img(self, path):
@@ -13,23 +13,19 @@ class Image_num_taged:
 
     def set_Font(self, font_Path, font_Size):
         self.fnt = ImageFont.truetype(font_Path, font_Size,
-                                      encoding = 'symb')
-        return True
-
-    def posi_Set(self):
+                                      encoding = 'unic')
         (self.width, self.height) = self.img.size
-        self.num_posi = self.width - 1.5 * self.font_size
+        self.num_posi = (self.width - font_Size, 0.5*font_Size)
         return True
 
     def num_Taged(self, str):
-        Image_num_taged.posi_Set(self)
         img_Taged = ImageDraw.Draw(self.img)
         img_Taged.text(self.num_posi, str, (255, 0, 0), self.fnt)
         del img_Taged
-        self.img.save(self.path)
+        self.img.save('image_taged.png')
 
 
 im = Image_num_taged()
 im.open_Img('squirrel.jpg')
-im.set_Font('Arabic.ttf', 20)
+im.set_Font('Arial.ttf', 40)
 im.num_Taged('4')
