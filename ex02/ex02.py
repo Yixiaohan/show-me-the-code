@@ -18,3 +18,8 @@ class Application(object):
                         ID VARCHAR(20))")
             cur.execute("INSERT INTO ID_Generate(ID) VALUES(self.id_box)")
         con.close()
+
+if __name__ == '__main__':
+    t = Application()
+    t.ID_Generate()
+    t.ID_Store()
