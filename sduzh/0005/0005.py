@@ -16,19 +16,5 @@ if not os.path.exists(outdir):
 for root, dirnames, filenames in os.walk(sys.argv[1]):
 	for infile in filenames:
 		im = Image.open(os.path.join(root, infile))
-		(w, h) = im.size
-		if w > h:
-			if w > 1136:
-				w, h = 1136, h * 1136 / w
-			if h > 640:
-				h, w = 640, w * 540 / h
-		else:
-			if h > 1136:
-				h, w = 1136, w * 1136 / h
-			if w > 640:
-				w, h = 640, h * 640 / w
-		im.resize((w, h)).save(os.path.join(outdir, infile))
-
-
-	
-
+		im.thumbnail((1136,640), Image.ANTIALIAS)
+		im.save(os.path.join(outdir, infile))
