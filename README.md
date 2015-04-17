@@ -179,3 +179,18 @@
 **第 0024 题：** 使用 Python 的 Web 框架，做一个 Web 版本 TodoList 应用。
 
 - ![SpringSide 版TodoList](http://i.imgur.com/NEf7zHp.jpg)
+
+**第 0025 题：** 使用 Python 实现：对着电脑吼一声,自动打开浏览器中的默认网站。
+    例如，对着笔记本电脑吼一声“百度”，浏览器自动打开百度首页。
+    关键字：Speech to Text
+    
+参考思路：    
+1：获取电脑录音-->WAV文件
+    python record wav
+
+2：录音文件-->文本
+    STT: Speech to Text
+    STT API Google API
+    TTS: Text to Speech
+
+3:文本-->电脑命令
