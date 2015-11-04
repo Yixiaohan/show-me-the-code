@@ -19,7 +19,7 @@ draw = ImageDraw.Draw(im)
 
 #创建font对象
 font = ImageFont.truetype(
-'/usr/share/fonts/truetype/freefont/FreeSansOblique.ttf', 36)
+'/usr/share/fonts/truetype/freefont/FreeSansOblique.ttf', size = 36)
 
 #字体颜色 、内容
 def col():
