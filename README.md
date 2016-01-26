@@ -3,9 +3,10 @@
 
 #### 说明： ####
 
-- Python 练习册，每天一个小程序。注：将 Python 换成其他语言，大多数题目也试用
+- Python 练习册，每天一个小程序。注：将 Python 换成其他语言，大多数题目也适用
 - 不会出现诸如「打印九九乘法表」、「打印水仙花」之类的题目
-- 欢迎大家 Pull Request 出题目，贴代码（Gist、Blog皆可）:-)
+- [点此链接，会看到每个题目的代码， 欢迎大家 Pull Request 出题目，贴代码（Gist、Blog皆可）,Pull Request 请提交你个人的仓库 URL 链接地址。现在项目太大了，提交 URL 吧 :+1: :-)](https://github.com/Show-Me-the-Code/python)
+- 本文本文由@史江歌（shijiangge@gmail.com  QQ:499065469）根据互联网资料收集整理而成，感谢互联网，感谢各位的分享。鸣谢！本文会不断更新。
 
 > Talk is cheap. Show me the code.--Linus Torvalds
 
@@ -72,6 +73,8 @@
 
 ![student.xls](http://i.imgur.com/nPDlpme.jpg)
 
+- [阅读资料](http://www.cnblogs.com/skynet/archive/2013/05/06/3063245.html) 腾讯游戏开发 XML 和 Excel 内容相互转换
+
 **第 0015 题：** 纯文本文件 city.txt为城市信息, 里面的内容（包括花括号）如下所示：
 
     {
@@ -116,7 +119,6 @@
     </students>
     </root>
 
-- [阅读资料](http://www.cnblogs.com/skynet/archive/2013/05/06/3063245.html) 腾讯游戏开发 xml 和 Excel 相互转换    
 
 **第 0018 题：** 将 第 0015 题中的 city.xls 文件中的内容写到 city.xml 文件中，如下所示：
 
@@ -153,3 +155,45 @@
     
     </numbers>
     </root>
+
+**第 0020 题：** [登陆中国联通网上营业厅](http://iservice.10010.com/index_.html) 后选择「自助服务」 --> 「详单查询」，然后选择你要查询的时间段，点击「查询」按钮，查询结果页面的最下方，点击「导出」，就会生成类似于 2014年10月01日～2014年10月31日通话详单.xls 文件。写代码，对每月通话时间做个统计。
+
+**第 0021 题：** 通常，登陆某个网站或者 APP，需要使用用户名和密码。密码是如何加密后存储起来的呢？请使用 Python 对密码加密。
+
+- 阅读资料 [用户密码的存储与 Python 示例](http://zhuoqiang.me/password-storage-and-python-example.html)
+
+- 阅读资料 [Hashing Strings with Python](http://www.pythoncentral.io/hashing-strings-with-python/)
+
+- 阅读资料 [Python's safest method to store and retrieve passwords from a database](http://stackoverflow.com/questions/2572099/pythons-safest-method-to-store-and-retrieve-passwords-from-a-database)
+
+**第 0022 题：** iPhone 6、iPhone 6 Plus 早已上市开卖。请查看你写得 第 0005 题的代码是否可以复用。
+
+**第 0023 题：** 使用 Python 的 Web 框架，做一个 Web 版本 留言簿 应用。
+
+[阅读资料：Python 有哪些 Web 框架](http://v2ex.com/t/151643#reply53)
+
+- ![留言簿参考](http://i.imgur.com/VIyCZ0i.jpg)
+
+
+**第 0024 题：** 使用 Python 的 Web 框架，做一个 Web 版本 TodoList 应用。
+
+- ![SpringSide 版TodoList](http://i.imgur.com/NEf7zHp.jpg)
+
+**第 0025 题：** 使用 Python 实现：对着电脑吼一声,自动打开浏览器中的默认网站。
+
+
+    例如，对着笔记本电脑吼一声“百度”，浏览器自动打开百度首页。
+    
+    关键字：Speech to Text
+    
+参考思路：    
+1：获取电脑录音-->WAV文件
+    python record wav
+
+2：录音文件-->文本
+
+    STT: Speech to Text
+    
+    STT API Google API
+
+3:文本-->电脑命令
