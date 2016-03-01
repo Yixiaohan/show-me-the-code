@@ -12,8 +12,8 @@ def get_coupon(length, char):
 	return coupon
 
 def main():
-	length = int(raw_input("input length:"))
-	num = int(raw_input("input num:"))
+	length = int(raw_input("input length of the coupon:"))
+	num = int(raw_input("input num of the coupon:"))
 	for i in range(0,num):
 		coupon = get_coupon(length, char)
 		print coupon
