@@ -2,6 +2,7 @@
 #-*- coding:utf-8 -*-
 
 import random
+import sqlalchemy
 
 char = "1234567890poiuytrewqasdfghjklmnbvcxzQWERTYUIOPLKJHGFDSAZXCVBNM"
 
@@ -10,6 +11,9 @@ def get_coupon(length, char):
 	for i in range(0, length):
 		coupon = coupon+random.choice(char)
 	return coupon
+
+def db_conn(db_name):
+	engine = create_engine("mysql://") #add sth
 
 def main():
 	length = int(raw_input("input length of the coupon:"))
