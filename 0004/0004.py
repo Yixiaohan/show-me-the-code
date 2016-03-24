@@ -1,16 +1,18 @@
 #!/usr/bin/env python
 
-import collections
+from collections import Counter
 import re
 
-def wc(filename):
+def creat_list(filename):
     datalist = []
     with open(filename,'r') as f:
         for line in f:
              content = re.sub("\"|,|\.","",line)
              datalist.extend(content.strip().split(' '))
-    #print datalist
-    print collections.Counter(datalist)
+    return datalist
+
+def wc(filename):
+    print Counter(creat_list(filename))
 
 if __name__ == "__main__":
     filename =  'test.txt'
