@@ -26,4 +26,5 @@ def most_comm():
        print wc(txt)
 
 if __name__ == "__main__":
-    most_comm()
+    #most_comm()
+    print map(wc,list_txt())
