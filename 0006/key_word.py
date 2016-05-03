@@ -23,7 +23,8 @@ def wc(filename):
 
 
 def most_comm():
-    for txt in list_txt():
+    all_txt = list_txt()
+    for txt in all_txt:
         print wc(txt)
 
 if __name__ == "__main__":
