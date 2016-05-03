@@ -22,7 +22,8 @@ def f_replace(f_word, input_str):
 
 
 def main(f_file, input_str):
-    for f_word in f_words(f_file):
+    f_words_list = f_words(f_file)
+    for f_word in f_words_list:
         if filtered_or_not(f_word, input_str):
             input_str = f_replace(f_word, input_str)
     return input_str
