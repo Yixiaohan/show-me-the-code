@@ -14,7 +14,8 @@ def filtered_words(f_file):
 
 
 def filtered_or_not(input_word, f_file):
-    return (input_word in filtered_words(f_file))
+    filtered_words_list = filtered_words(f_file)
+    return (input_word in filtered_words_list)
 
 
 def print_user_input(input_word, f_file):
