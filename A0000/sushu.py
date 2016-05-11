@@ -5,8 +5,6 @@ import sys
 
 def prime(n):
     flag = [1]*(n+2)
-    flag[1] = 0		# 1 is not prime
-    flag[n+1] = 1
     p=2
     while(p<=n):
         print p 
