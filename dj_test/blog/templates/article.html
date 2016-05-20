@@ -1,3 +1,5 @@
+
+{% load custom_markdown %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +12,6 @@
 <p>{{ author }}</p>
 <p> {{ create_at }}</p>
 
-<p>{{ content }}</p>
+<p>{{ content | custom_markdown }}</p>
 </body>
 </html>

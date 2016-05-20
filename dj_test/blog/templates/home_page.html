@@ -5,10 +5,10 @@
     <title>myblog</title>
 </head>
 <body>
-welcome
 
-this is the home page
-
+{% for article in article_lists %}
+<p>{{ article }}</p>
+{% endfor %}
 
 </body>
 </html>
