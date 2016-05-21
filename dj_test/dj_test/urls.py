@@ -14,15 +14,16 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^$', home_page),
+    # url(r'^home$', home_page, name='home_page'),
+    url(r'^blog$', home_page, name='blog home page'),
+
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('django.contrib.auth.urls')),
-    url(r'^blog$', home_page, name='blog home page'),
 
     url(r'^message_board$', views.message_board, name='message board'),
     url(r'^api/message_submit$', views.message_submit, name='submit messag'),
 
-    url(r'^article$', article_view, name='article_page'),
-    url(r'^home$', home_page, name='home_page'),
+    url(r'^article/(?P<pk>[0-9]+)/$', article_view, name='article'),
 
     url(r'^test$', test, name='test'),
 )

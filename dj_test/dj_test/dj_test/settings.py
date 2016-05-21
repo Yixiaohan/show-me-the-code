@@ -15,7 +15,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR+'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         # 'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -46,7 +46,7 @@ SECRET_KEY = '6q!htqn=u^kqg(j63c9w^pz!wjg*jq3pbxo4gk^$w==6rq(qdb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -61,6 +61,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'message_board',
+    'login',
+    'blog',
+    'todolist',
+    'bootstrap3',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -105,3 +109,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+LOGIN_REDIRECT_URL = '/blog/'
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'

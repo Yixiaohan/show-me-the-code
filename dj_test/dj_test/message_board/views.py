@@ -4,8 +4,7 @@ from models import MessageBoard
 from django.views.decorators.csrf import csrf_exempt
 import json
 from django import forms
-
-
+from django.core import mail
 # Create your views here.
 def message_board(request):
     message_list = MessageBoard.objects.all().order_by('-pk')
@@ -38,20 +37,3 @@ def message_submit(request):
             'status': 400001,  # null message
             'message': "null message can't save",
         })
-
-
-# @login_required
-@csrf_exempt
-def test(request):
-    if request.user.is_authenticated():
-        resp = {
-            'status': 200,
-            'message': 'ok',
-        }
-    else:
-        resp = {
-            'status': 400001,
-            'message': 'not ok',
-        }
-
-    return json.dumps(resp)
