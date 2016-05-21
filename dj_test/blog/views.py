@@ -3,46 +3,51 @@ from django.shortcuts import render, get_object_or_404
 from .models import Article
 
 
+CATEGORY = (u'行云流水', u'程序人生', u'痴人说梦')
+
+
 # Create your views here.
-
-def home_page(request):
-    blog_name = "myblog"
-    article_lists = Article.objects.all().order_by('-create_at')
-    article_lists = [article_list.data for article_list in article_lists]
-
-    data = {
-        'blog_name': blog_name,
-        'article_lists': article_lists,
-    }
-    return render(request, 'index.html', data)
-
-
-def blog_fullwidth(request):
-    blog_name = "myblog"
-    article_lists = Article.objects.all().order_by('-create_at')
-    article_lists = [article_list.data for article_list in article_lists]
-
-    data = {
-        'blog_name': blog_name,
-        'article_lists': article_lists,
-    }
-    return render(request, 'full-width.html', data)
-
-
-def article_view(request, pk):
-    # title = request.GET.get('title', '')
-    # title = u'这里是文章的题目'   # test
-
-    article = Article.objects.get(pk=pk).data
-
-    recent_lists = Article.objects.all().order_by('-create_at')[:3]
+def get_recent_lists():
+    recent_lists = Article.objects.all().order_by('-create_at')[0:5]
     recent_lists = [recent_list.data for recent_list in recent_lists]
+
+    return recent_lists
+
+
+def home(request):
+    article_lists = Article.objects.all().order_by('-create_at')
+    article_lists = [article_list.data for article_list in article_lists]
+
+    recent_lists = get_recent_lists()
+
+    data = {
+        'article_lists': article_lists,
+        'recent_lists': recent_lists,
+        'category_lists': CATEGORY
+    }
+    return render(request, 'home.html', data)
+
+
+def blog(request):
+    article_lists = Article.objects.all().order_by('-create_at')
+    article_lists = [article_list.data for article_list in article_lists]
+
+    data = {
+        'article_lists': article_lists,
+    }
+    return render(request, 'blog.html', data)
+
+
+def article(request, pk):
+    article = Article.objects.get(pk=pk).data
+    recent_lists = get_recent_lists()
 
     data = {
         'article': article,
         'recent_lists': recent_lists,
+        'category_lists': CATEGORY
     }
-    return render(request, 'single.html', data)
+    return render(request, 'article.html', data)
 
 
 def about(request):

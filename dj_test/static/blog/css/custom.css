@@ -242,7 +242,7 @@ figure {
 .post-date::after,
 .post-author::after {
 	position: absolute;
-	content: '.';
+	content: ' ';
 	color: #000;
 	font-size: 30px;
 	top: -22px;

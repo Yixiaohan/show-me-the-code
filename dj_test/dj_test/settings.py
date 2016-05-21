@@ -7,7 +7,7 @@ https://docs.djangoproject.com/en/1.6/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.6/ref/settings/
 """
-
+# -*- coding:utf-8 -*-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -65,7 +65,6 @@ INSTALLED_APPS = (
     'login',
     'blog',
     'todolist',
-    'bootstrap3',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -88,7 +87,7 @@ WSGI_APPLICATION = 'dj_test.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(PROJ_DIR,'mysite.sqlite3'),
     }
 }
 

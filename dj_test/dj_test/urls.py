@@ -2,7 +2,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib.auth import urls as auth_urls
 from django.contrib import admin
-from blog.views import article_view, home_page, test, about, blog_fullwidth, contact
+from blog.views import home, article, blog, about, contact, test
 from message_board import views
 admin.autodiscover()
 
@@ -13,14 +13,14 @@ urlpatterns = patterns('',
     # url(r'^$', 'dj_test.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^$', home_page, name='home_page'),
-    url(r'^home$', home_page, name='home_page'),
-
     url(r'^admin/', include(admin.site.urls), name='admin'),
     url(r'^', include('django.contrib.auth.urls')),
 
-    url(r'^blog$', blog_fullwidth, name='blog'),
-    url(r'^article/(?P<pk>[0-9]+)/$', article_view, name='article'),
+    url(r'^$', home, name='home'),
+    url(r'^home$', home, name='home'),
+
+    url(r'^blog$', blog, name='blog'),
+    url(r'^article/(?P<pk>[0-9]+)/$', article, name='article'),
     url(r'^contact$', contact, name='contact'),
     url(r'^about$', about, name='about'),
 
