@@ -14,7 +14,19 @@ def home_page(request):
         'blog_name': blog_name,
         'article_lists': article_lists,
     }
-    return render(request, 'home_page.html', data)
+    return render(request, 'index.html', data)
+
+
+def blog_fullwidth(request):
+    blog_name = "myblog"
+    article_lists = Article.objects.all().order_by('-create_at')
+    article_lists = [article_list.data for article_list in article_lists]
+
+    data = {
+        'blog_name': blog_name,
+        'article_lists': article_lists,
+    }
+    return render(request, 'full-width.html', data)
 
 
 def article_view(request, pk):
@@ -23,7 +35,16 @@ def article_view(request, pk):
 
     article = get_object_or_404(Article, pk=pk).data
 
-    return render(request, 'article.html', article)
+    return render(request, 'single.html', article)
+
+
+def about(request):
+    return render(request, 'about.html', {})
+
+
+def contact(request):
+    return render(request, 'contact.html', {})
+
 
 def test(request):
     message = ['this a message']

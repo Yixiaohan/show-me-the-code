@@ -34,6 +34,7 @@ class Article(models.Model):
     create_at = models.DateTimeField('create time', auto_now_add=True, null=False)
     update_at = models.DateTimeField('update time', auto_now=True)
     tags = models.CharField('tags', null=True, max_length=30, help_text='tags')
+    # abstract = models.CharField(null=False, blank=False, max_length=10, help_text='abstract')
 
     def __unicode__(self):
         return self.title

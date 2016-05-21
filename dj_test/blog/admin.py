@@ -13,5 +13,6 @@ class ArticleAdmin(admin.ModelAdmin):
     list_display = ('title', 'content', 'pk', 'tags')
     search_fields = ('title', 'tags')
 
+
 admin.site.register(Author, AuthorAdmin)
 admin.site.register(Article, ArticleAdmin)
