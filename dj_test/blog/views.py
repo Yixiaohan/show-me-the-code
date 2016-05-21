@@ -33,9 +33,16 @@ def article_view(request, pk):
     # title = request.GET.get('title', '')
     # title = u'这里是文章的题目'   # test
 
-    article = get_object_or_404(Article, pk=pk).data
+    article = Article.objects.get(pk=pk).data
 
-    return render(request, 'single.html', article)
+    recent_lists = Article.objects.all().order_by('-create_at')[:3]
+    recent_lists = [recent_list.data for recent_list in recent_lists]
+
+    data = {
+        'article': article,
+        'recent_lists': recent_lists,
+    }
+    return render(request, 'single.html', data)
 
 
 def about(request):

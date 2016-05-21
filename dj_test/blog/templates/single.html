@@ -66,7 +66,7 @@
 					<main class="col-md-8">
 						<article class="post post-1">
 							<header class="entry-header">
-								<h1 class="entry-title">{{ title }}</h1>
+								<h1 class="entry-title">{{ article.title }}</h1>
 								<div class="entry-meta">
 									<span class="post-category"><a href="#">Web Design</a></span>
 			
@@ -79,23 +79,21 @@
 							</header>
                             {% load custom_markdown %}
 							<div class="entry-content clearfix">
-								<p>{{ content | custom_markdown }}</p>
+								<p>{{ article.content | custom_markdown }}</p>
 							</div>
 						</article>
 					</main>
 					<aside class="col-md-4">
-						<div class="widget widget-recent-posts">		
-							<h3 class="widget-title">Recent Posts</h3>		
+						<div class="widget widget-recent-posts">
+
+							<h3 class="widget-title">Recent Posts</h3>
+
 							<ul>
+                                 {% for rencent_list in recent_lists %}
 								<li>
-									<a href="#">Adaptive Vs. Responsive Layouts And Optimal Text Readability</a>
+									<a href="/article/{{ rencent_list.pk }}">{{ rencent_list.title }}</a>
 								</li>
-								<li>
-									<a href="#">Web Design is 95% Typography</a>
-								</li>
-								<li>
-									<a href="#">Paper by FiftyThree</a>
-								</li>
+								{% endfor %}
 							</ul>
 						</div>
 						<div class="widget widget-archives">		
