@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 from django.conf.urls import patterns, include, url
 from django.contrib.auth import urls as auth_urls
+from dj_test.settings import STATIC_PATH
 from django.contrib import admin
 from blog.views import home, article, blog, about, contact, test
 from message_board import views
@@ -28,4 +29,6 @@ urlpatterns = patterns('',
     url(r'^api/message_submit$', views.message_submit, name='message_submit'),
 
     url(r'^test$', test, name='test'),
+
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_PATH}),
 )

@@ -45,11 +45,11 @@ TEMPLATES = [
 SECRET_KEY = '6q!htqn=u^kqg(j63c9w^pz!wjg*jq3pbxo4gk^$w==6rq(qdb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -123,3 +123,5 @@ STATICFILES_DIRS = (
 
 LOGIN_REDIRECT_URL = '/blog/'
 CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+
+STATIC_PATH = os.path.join(os.path.dirname(__file__), '../static').replace('\\', '/')
