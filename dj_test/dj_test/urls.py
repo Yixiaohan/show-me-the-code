@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     url(r'^$', home, name='home'),
     url(r'^home$', home, name='home'),
 
-    url(r'^blog$', blog, name='blog'),
+    url(r'^blog/$', blog, name='blog'),
     url(r'^article/(?P<pk>[0-9]+)/$', article, name='article'),
     url(r'^contact$', contact, name='contact'),
     url(r'^about$', about, name='about'),
