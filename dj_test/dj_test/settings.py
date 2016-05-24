@@ -45,7 +45,7 @@ TEMPLATES = [
 SECRET_KEY = '6q!htqn=u^kqg(j63c9w^pz!wjg*jq3pbxo4gk^$w==6rq(qdb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = False
 
@@ -65,6 +65,7 @@ INSTALLED_APPS = (
     'login',
     'blog',
     'todolist',
+    'pagedown',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -30,5 +30,5 @@ urlpatterns = patterns('',
 
     url(r'^test$', test, name='test'),
 
-    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_PATH}),
+    # url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_PATH}),
 )

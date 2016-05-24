@@ -21,6 +21,11 @@
 	    <script src="/static/blog/js/bootstrap.min.js"></script>
 	    <script src="/static/blog/js/pace.min.js"></script>
 	    <script src="/static/blog/js/modernizr.custom.js"></script>
+
+        <!-- 代码高亮 -->
+        <link rel="stylesheet" href="/static/blog/highlight/styles/monokai.css">
+        <script src="/static/blog/highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
 	</head>
 
 	<body>
@@ -86,7 +91,7 @@
 								</div>
 							</header>
 							<div class="entry-content clearfix">
-								<p>  {{ article.content | custom_markdown | truncatechars:200 }}</p>
+								<p>  {{ article.content | custom_markdown  }}</p>
 								<div class="read-more cl-effect-14">
 									<a href="/article/{{ article.pk }}" class="more-link">Continue reading <span class="meta-nav">→</span></a>
 								</div>
