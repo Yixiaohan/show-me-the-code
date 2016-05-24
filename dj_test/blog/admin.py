@@ -1,13 +1,8 @@
 # -*- coding:utf-8 -*-
 from django.contrib import admin
-from models import Article, Author, Category
+from models import Article, Category
 from form import ArticleForm
 # Register your models here.
-
-
-class AuthorAdmin(admin.ModelAdmin):
-    list_display = ('author', 'age', 'status', 'sex')
-    search_fields = ('author', )
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -21,6 +16,5 @@ class ArticleAdmin(admin.ModelAdmin):
     search_fields = ('title', 'tags', 'abstract', 'content')
 
 
-admin.site.register(Author, AuthorAdmin)
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Category, CategoryAdmin)

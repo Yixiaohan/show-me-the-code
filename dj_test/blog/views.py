@@ -3,13 +3,11 @@ from django.shortcuts import render
 from .models import Article, Category
 
 
-CATEGORY = (u'行云流水', u'程序人生', u'痴人说梦')
-
-
 # Create your views here.
 def get_category():
     category_lists = Category.objects.all()
-    category_lists = [category_list.__unicode__() for category_list in category_lists]
+    category_lists = [category_list.data for category_list in category_lists]
+
     return category_lists
 
 
@@ -20,16 +18,18 @@ def get_recent_lists():
     return recent_lists
 
 
+CATEGORY = get_category()
+RECENT_LISTS = get_recent_lists()
+
+
 def home(request):
     article_lists = Article.objects.all().order_by('-create_at')
     article_lists = [article_list.data for article_list in article_lists]
 
-    recent_lists = get_recent_lists()
-
     data = {
         'article_lists': article_lists,
-        'recent_lists': recent_lists,
-        'category_lists': get_category(),
+        'recent_lists': RECENT_LISTS,
+        'category_lists': CATEGORY,
     }
     return render(request, 'home.html', data)
 
@@ -46,14 +46,25 @@ def blog(request):
 
 def article(request, pk):
     article = Article.objects.get(pk=pk).data
-    recent_lists = get_recent_lists()
 
     data = {
         'article': article,
-        'recent_lists': recent_lists,
-        'category_lists': get_category(),
+        'recent_lists': RECENT_LISTS,
+        'category_lists': CATEGORY,
     }
     return render(request, 'article.html', data)
+
+
+def category_article(request, category_name):
+    article_lists = Article.objects.all().filter(category=category_name)
+    article_lists = [article_list.data for article_list in article_lists]
+
+    data = {
+        'article': article_lists,
+        'recent_lists': RECENT_LISTS,
+        'category_lists': CATEGORY,
+    }
+    return render(request, 'category.html', data)
 
 
 def about(request):

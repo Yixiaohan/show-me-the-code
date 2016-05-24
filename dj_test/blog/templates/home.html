@@ -125,7 +125,8 @@
 							<ul>
 							 {% for category in category_lists %}
 								<li>
-									<a href="#">{{ category }}</a>
+                                    <a href=''>{{ category.name }}</a>
+{#									<a href={% url 'category' category.alias %}>{{ category.name }}</a>#}
 								</li>
                                 {% endfor %}
 							</ul>
