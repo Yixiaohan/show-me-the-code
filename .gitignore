@@ -1,0 +1,68 @@
+# settings.py
+settings.py
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.swp
+# C extensions
+*.so
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+venv/
+var/
+static/upload/
+*.egg-info/
+.installed.cfg
+*.egg
+*.sublime*
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+# *.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+.settings
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
+
+# Sphinx documentation
+docs/_build/
+
+
+# Ignore For zhTimer
+.DS_Store
+db.sqlite3
+local_settings.py
+local_urls.py
+
+.idea/
+collect_static/
+local_tests
+media/

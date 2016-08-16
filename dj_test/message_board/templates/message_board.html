@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MESSAGE BOARD</title>
+</head>
+<body>
+
+
+<p><b>hello, welcome to the message board</b></p>
+<p>＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊</p>
+
+<form action="/api/message_submit" method="post">
+            {% csrf_token %}
+            {{ form }}
+    姓名：
+<br />
+<input type="text" name="name">
+<br />
+留言：
+<br />
+
+
+<textarea rows="3" cols="20" name="message">
+
+</textarea>
+<br />
+<input type="submit" value="发表" />
+</form>
+
+
+
+<p>＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊</p>
+
+
+<p>留言列表</p>
+{% for message in message_list %}
+    <p>--------------------------------------------------------------</p>
+<p> {{ message.name  }}   {{ message.create_at }} </p>
+
+    <p> {{ message.message }} </p>
+
+{% endfor %}
+
+
+
+</body>
+</html>

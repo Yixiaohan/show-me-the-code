@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>myblog</title>
+</head>
+<body>
+
+{% for article in article_lists %}
+    <p><a href="/article/{{ article.pk }}" >{{ article.title }}</a> </p>
+    <p>{{ article.create_at }}</p>
+    <p><a href={% url 'article' article.pk %} >{{ article.title }}</a> </p>
+{% endfor %}
+
+</body>
+</html>

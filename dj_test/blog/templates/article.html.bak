@@ -1,0 +1,17 @@
+
+{% load custom_markdown %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>article</title>
+</head>
+<body>
+<p>{{ title }}</p>
+
+
+<p> {{ create_at }}</p>
+
+<p>{{ content | custom_markdown }}</p>
+</body>
+</html>
