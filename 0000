@@ -1,0 +1,21 @@
+# -*- utf-8 -*-
+# @author : xiaoYu
+
+from PIL import Image, ImageDraw, ImageFont
+
+
+def add_message_number(file_path, file_name):
+    # 设置字体
+    font = ImageFont.truetype('arial.ttf', 20)
+    # 打开文件
+    im = Image.open(file_path + file_name)
+    # 获取图片大小
+    width, height = im.size
+    # 定义画笔
+    draw = ImageDraw.Draw(im)
+    draw.ellipse((width - 20, 0, width, 20), (255, 0, 0), (255, 0, 0))
+    draw.text((width - 15, 0), '4', fill=(255, 255, 255), font=font)
+    del draw
+    im.show()
+    # 保存
+    im.save(file_path + '信息气泡' + file_name)
