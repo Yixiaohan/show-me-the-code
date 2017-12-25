@@ -1,0 +1,54 @@
+1.安装MYSQL
+
+2.安装install mysql-connector #安装驱动或者pip install mysql-connector-python --allow-external mysql-connector-python
+
+3.测试
+# 导入MySQL驱动:
+>>>import mysql.connector
+#连接dexterliao
+conn = mysql.connector.connect(user='root', password='', database='dexterliao')
+cursor = conn.cursor()
+#创建user表单
+cursor.execute('create table user (`id` INT UNSIGNED AUTO_INCREMENT, `code` VARCHAR(40) NOT NULL,PRIMARY KEY ( `id` ))')
+
+4.安装SQLAlchemy
+
+5.底层处理
+from sqlalchemy import create_engine
+mysql+mysqlconnector://<user>:<password>@<host>[:<port>]/<dbname>
+engine = create_engine('mysql+mysqlconnector://root:password@localhost:3306/test')
+6.创建表
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String, ForeignKey, UniqueConstraint, Index
+from sqlalchemy.orm import sessionmaker, relationship
+from sqlalchemy import create_engine
+
+
+engine = create_engine('mysql+mysqlconnector://root:password@localhost:3306/test')
+
+# 创建对象的基类:
+Base = declarative_base()
+
+# 定义User对象:
+class User(Base):
+    # 表的名字:
+    __tablename__ = 'user'
+
+    # 表的结构:
+    id = Column(String(20), primary_key=True)
+    code = Column(String(20))
+# 创建DBSession类型:
+DBSession = sessionmaker(bind=engine)
+
+
+# 创建session对象:
+session = DBSession()
+# 创建新User对象:
+new_user = User(id='5', name='Bob')
+# 添加到session:
+session.add(new_user)
+# 提交即保存到数据库:
+session.commit()
+# 关闭session:
+session.close()
+
