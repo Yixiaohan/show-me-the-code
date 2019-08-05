@@ -1,0 +1,19 @@
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+import os
+import os.path
+import sys
+
+real_dirct = os.path.split(os.path.realpath(__file__))[0]
+os.chdir(real_dirct)
+result_d = real_dirct + '/result'
+if os.path.exists(result_d):
+    os.system("rm -rf result")
+#TODO passing xml files path to scripts could be more elegant.
+os.system("./analyze_aarch64_sysReg.py")
+os.chdir(real_dirct)
+os.system("./make_and_objdump_obj.py")
+os.chdir(real_dirct)
+os.system("./gen_sysReg_cases_for_go.py")
+os.chdir(real_dirct)
